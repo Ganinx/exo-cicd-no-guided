@@ -4,14 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: [3.14,3.13,3.12]
     steps:
     - uses: actions/checkout@v2
-    - name: Setup python
-      uses: actions/setup-python@v5
+    - name: Setup node
+      uses: actions/setup-node@v2
       with:
-        python-version: ${{matrix.python-version}}
-    - name: Run a one-line script
-      run: python -v
+        node-version: '14'
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests
+      run: npm test
+  
