@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: La recette magique
-      run: echo "La recette est : ${{secrets.RECETTE_SECRETE}}
+      run: echo La recette est : ${{ secrets.RECETTE_SECRETE }}
