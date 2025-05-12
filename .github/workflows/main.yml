@@ -6,4 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one line script
-      run: echo Maxime adore le fromage !
+      run: |
+        echo Maxime adore le fromage !
+        echo Quentin adore la **** au miel !
