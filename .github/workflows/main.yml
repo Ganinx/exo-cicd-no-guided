@@ -3,7 +3,15 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.10,3.8,2.4.1]
     steps:
     - uses: actions/checkout@v2
-    - name: La recette au miel
-      run: echo ${{ secrets.RECETTE_SECRETE }}
+    - name: Setup python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{matrix.python-version}}
+    - name: Run a one-line script
+      run: python -v
