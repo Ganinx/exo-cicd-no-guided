@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run a multi-line script
-      run: |
-        echo Maxime adore le fromage !
-        echo Quentin adore la **** au miel !
+    - name: Setup environnement node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'latest'
+    - name: lancement de node
+      run: node -v
