@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: La recette
+    - name: La recette au miel
       run: echo ${{ secrets.RECETTE_SECRETE }}
