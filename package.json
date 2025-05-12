@@ -1,7 +1,7 @@
 {
-  "name": "exercice1-cicd",
+  "name": "exercice-cicd",
   "version": "1.0.0",
   "scripts": {
-    "build": "mkdir -p build && cp index.html style.css build/"
+    "build": "mkdir -p build && cp index.html build/"
   }
 }
