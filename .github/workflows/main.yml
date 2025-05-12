@@ -5,9 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Setup environnement node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 'latest'
-    - name: lancement de node
-      run: node -v
+    - name: La recette magique
+      run: echo La recette est : ${{secrets.RECETTE_SECRETE}}
